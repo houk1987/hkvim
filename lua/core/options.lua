@@ -8,7 +8,8 @@ local opts = {
 	cuc=true,
   scl='yes',
   swf=false,
-  autochdir=true
+  autochdir=true,
+  showmode=false
 }
 
 for k,v in pairs(opts)do
