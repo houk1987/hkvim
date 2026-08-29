@@ -9,7 +9,9 @@ local opts = {
   scl='yes',
   swf=false,
   autochdir=true,
-  showmode=false
+  showmode=false,
+  ic =true,
+  smartcase=true,
 }
 
 for k,v in pairs(opts)do
