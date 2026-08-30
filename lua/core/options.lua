@@ -1,5 +1,6 @@
 local opts = {
 	number = true,
+  rnu=true,
 	tabstop=2,
 	sts=2,
 	sw=2,

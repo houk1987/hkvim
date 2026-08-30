@@ -22,14 +22,28 @@ return{
   },
   --nvim-tree
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons", -- optional, but recommended
-    },
-    lazy = false, -- neo-tree will lazily load itself
+    "nvim-tree/nvim-tree.lua",
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      vim.g.loaded_netrw = 1
+      vim.g.loaded_netrwPlugin = 1
+      vim.opt.termguicolors = true
+      local config = {
+        sort = {
+          sorter = "case_sensitive",
+        },
+        view = {
+          width = 30,
+        },
+        renderer = {
+          group_empty = true,
+        },
+        filters = {
+          dotfiles = true,
+        },
+      }
+      require("nvim-tree").setup(config)
+    end
   }
 }
 
