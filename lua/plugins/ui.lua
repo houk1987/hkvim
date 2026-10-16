@@ -7,8 +7,6 @@ return{
       vim.cmd([[colorscheme tokyonight]])
     end,
   },
-
-  --lualine
   {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -20,30 +18,12 @@ return{
       }
     end
   },
-  --nvim-tree
+
   {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      vim.g.loaded_netrw = 1
-      vim.g.loaded_netrwPlugin = 1
-      vim.opt.termguicolors = true
-      local config = {
-        sort = {
-          sorter = "case_sensitive",
-        },
-        view = {
-          width = 30,
-        },
-        renderer = {
-          group_empty = true,
-        },
-        filters = {
-          dotfiles = true,
-        },
-      }
-      require("nvim-tree").setup(config)
-    end
-  }
+    'stevearc/oil.nvim',
+    opts = {},
+    dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+    lazy = false,
+  },
 }
 
