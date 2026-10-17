@@ -16,15 +16,14 @@ return{
     "neovim/nvim-lspconfig",
   },
   config = function()
-    local lsp = vim.lsp
-    local lspconfig = lsp.config
-
-    lspconfig('lua_ls',{
-      diagnostics = {
-        globals = {"vim"}
-      }
+    require('mason').setup()
+    require('mason-lspconfig').setup({
+        ensure_installed = { "lua_ls", "pyright" },
+        automatic_enable = true,
     })
 
-    vim.diagnostic.config({ virtual_text = true })
+    vim.o.ac=true
+
+    -- vim.diagnostic.config({ virtual_text = true })
   end
 }
