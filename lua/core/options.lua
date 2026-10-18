@@ -13,8 +13,10 @@ local opts = {
   showmode=false,
   ic =true,
   smartcase=true,
+  autowrite=true,
 }
 
 for k,v in pairs(opts)do
   vim.opt[k]=v
 end
+
