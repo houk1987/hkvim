@@ -38,6 +38,5 @@ return {
 		-- vim.opt.completeopt={'menuone','noselect'}
 		-- vim.o.pumheight = 10
 		-- vim.o.pumborder = "rounded"
-		-- vim.diagnostic.config({ virtual_text = true })
 	end,
 }

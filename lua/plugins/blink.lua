@@ -13,13 +13,9 @@ return {
 	opts = {
 		keymap = {
 			preset = "default",
-
 			["<CR>"] = { "accept", "fallback" },
 			["<Esc>"] = { "hide", "fallback" },
-			["<Tab>"] = {
-				"select_next",
-				"fallback",
-			},
+			["<Tab>"] = { "select_next", "fallback_to_mappings" },
 		},
 
 		appearance = {
